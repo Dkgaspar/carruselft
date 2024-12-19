@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso con Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 10%;
+        }
+        #password-form {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = "Deysi"; // Define tu contraseña aquí
+            var input = document.getElementById("password").value;
+
+            if (input === password) {
+                // Redirige a otra página HTML
+                window.location.href = "pagina.html"; // Cambia esto por la ruta de tu página
+            } else {
+                alert("Contraseña incorrecta. Intenta de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Formulario para la contraseña -->
+    <div id="password-form">
+        <h2>Acceso restringido</h2>
+        <p>Por favor, ingresa la contraseña:</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="checkPassword()">Ingresar</button>
+    </div>
+</body>
+</html>
